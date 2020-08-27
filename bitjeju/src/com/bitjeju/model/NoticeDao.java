@@ -98,13 +98,14 @@ public class NoticeDao {
 		}
 	}
 	
-	public int UpdateNotice(String title,String content,int ntnum) throws SQLException{
-		String sql="update notice set title=?,content=? where ntnum=?";
+	public int UpdateNotice(int ntnum,String title,String name,String content) throws SQLException{
+		String sql="update notice set title=?,name=?,content=? where ntnum=?";
 		try{
 			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(4, ntnum);
 			pstmt.setString(1, title);
-			pstmt.setString(2, content);
-			pstmt.setInt(3, ntnum);
+			pstmt.setString(2, name);
+			pstmt.setString(3, content);
 			return pstmt.executeUpdate();
 		}finally{
 			if(pstmt!=null)pstmt.close();

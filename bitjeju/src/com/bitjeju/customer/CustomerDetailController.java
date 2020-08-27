@@ -27,27 +27,23 @@ public class CustomerDetailController extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		req.getRequestDispatcher("detail.jsp").forward(req, resp);
+		req.getRequestDispatcher("customerdetail.jsp").forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
 			throws ServletException, IOException {
-	/*	req.setCharacterEncoding("utf-8");
 		int ntnum=Integer.parseInt(req.getParameter("ntnum"));
-		String title=req.getParameter("title").trim();
-		String name=req.getParameter("name").trim();
-		String content=req.getParameter("content").trim();
-		
-		
+		String title = req.getParameter("title").trim();
+		String name = req.getParameter("name").trim();
+		String content = req.getParameter("content").trim();
 		try {
 			NoticeDao dao = new NoticeDao();
-			dao.updateOne(ntnum, title,content);
+			dao.UpdateNotice(ntnum, title, name, content);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		resp.sendRedirect("customercenter.bit");*/
+		resp.sendRedirect("customercenter.bit");
 	}
 	
 }
