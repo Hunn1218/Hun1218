@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+   <div id="menu">   
+        <div class="grid3">&nbsp;</div>
+        <div class="grid6">
+            <ul>
+                <li><a href="introintro.bit">비트캠프</a></li>
+                <li><a href="edulist.bit">교육과정</a></li>
+                <li><a href="jobinfo.bit">취업지원</a></li>
+                <li><a href="customercenter.bit">고객센터</a></li>
+            </ul>
+        </div>
+        <div class="grid3">&nbsp;</div>
+   </div><!--menu-->
+   <div id="carousel" class="gird12">
+  </div><!--carousel-->
